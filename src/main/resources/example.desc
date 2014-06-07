@@ -1,0 +1,62 @@
+
+‹
+example.proto com.hubspot.hbase.filter.example"%
+
+ChildProto
+child_proto_val ("Ÿ
+ExampleProto
+
+id (
+	portal_id (
+name (	
+	bool_test (
+
+float_test (
+
+bytes_test (
+required_test (
+array_values (	A
+child_proto	 (2,.com.hubspot.hbase.filter.example.ChildProtoJ
+	test_enum
+ (27.com.hubspot.hbase.filter.example.ExampleProto.TestEnum
+double_test (
+default_test (:5
+
+InnerProto
+name (	"!
+TestEnum	
+APPLE
+
+ORANGEBBExampleProtos
+Œ
+protobuf_filter.protocom.hubspot.hbase.filter.models"Ñ
+FilterRequest
+protobuf_message_name (	
+descriptor_hash (
+
+compare_op (	D
+compare_value (2-.com.hubspot.hbase.filter.models.DynamicValue
+field_locator (	
+compare_message ("å
+DynamicValueF
+
+type_value (22.com.hubspot.hbase.filter.models.DynamicValue.Type
+value_double (
+value_float (
+value_integer (
+
+value_long (
+
+value_bool (
+value_string (	
+value_bytes ("x
+Type
+type_string
+type_integer
+	type_long
+type_double
+
+type_float
+	type_bool
+
+type_bytesBBProtobufFilterProtos

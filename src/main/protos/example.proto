@@ -1,0 +1,31 @@
+package com.hubspot.hbase.filter.example;
+
+option java_outer_classname = "ExampleProtos";
+
+message ChildProto {
+    optional int32 child_proto_val = 1;
+}
+
+message ExampleProto {
+    enum TestEnum {
+      APPLE = 1;
+      ORANGE = 2;
+    }
+
+    optional int64 id = 1;
+    optional int32 portal_id = 2;
+    optional string name = 3;
+    optional bool bool_test = 4;
+    optional float float_test = 5;
+    optional bytes bytes_test = 6;
+    required int32 required_test = 7;
+    repeated string array_values = 8;
+    optional ChildProto child_proto = 9;
+    optional TestEnum test_enum = 10;
+    optional double double_test = 11;
+    optional int32 default_test = 12 [default = 5];
+
+    message InnerProto {
+        optional string name = 1;
+    }
+}

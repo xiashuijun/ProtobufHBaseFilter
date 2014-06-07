@@ -1,0 +1,33 @@
+package com.hubspot.hbase.filter.models;
+
+option java_outer_classname = "ProtobufFilterProtos";
+
+message FilterRequest {
+    optional string protobuf_message_name = 1;
+    optional sfixed64 descriptor_hash = 2;
+    optional string compare_op = 3;
+    optional DynamicValue compare_value = 4;
+    optional string field_locator = 5;
+    optional bytes compare_message = 6;
+}
+
+message DynamicValue {
+    enum Type {
+        type_string = 1;
+        type_integer = 2;
+        type_long = 3;
+        type_double = 4;
+        type_float = 5;
+        type_bool = 6;
+        type_bytes = 7;
+    }
+
+    optional Type type_value = 1;
+    optional double value_double = 2;
+    optional float value_float = 3;
+    optional int32 value_integer = 4;
+    optional int64 value_long = 5;
+    optional bool value_bool = 6;
+    optional string value_string = 7;
+    optional bytes value_bytes = 8;
+}
