@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static com.hubspot.hbase.filter.example.ExampleProtos.ChildProto;
 import static com.hubspot.hbase.filter.example.ExampleProtos.ExampleProto.TestEnum;
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CompoundFieldComparisonTest extends BaseProtoFilterTest {
   @Test

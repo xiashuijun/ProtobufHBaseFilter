@@ -1,10 +1,9 @@
 package com.hubspot.hbase.filter;
 
-import com.google.protobuf.ByteString;
 import com.hubspot.hbase.filter.example.ExampleProtos;
 import org.junit.Test;
 
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class DefaultPrimitiveTest extends BaseProtoFilterTest {
   @Test

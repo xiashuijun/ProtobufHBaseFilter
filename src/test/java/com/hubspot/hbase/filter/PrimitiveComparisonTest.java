@@ -5,7 +5,7 @@ import org.junit.Test;
 
 
 import static com.hubspot.hbase.filter.example.ExampleProtos.ExampleProto;
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PrimitiveComparisonTest extends BaseProtoFilterTest {
 
@@ -101,7 +101,7 @@ public class PrimitiveComparisonTest extends BaseProtoFilterTest {
 
     assertThat(matches(filterBuilder()
             .hasFieldEqualTo("required_test", 3), exampleProto)).isTrue();
-    
+
     // Negative
     assertThat(matches(filterBuilder()
             .hasFieldEqualTo("id", 0L), exampleProto)).isFalse();
@@ -221,7 +221,7 @@ public class PrimitiveComparisonTest extends BaseProtoFilterTest {
             .hasFieldLessThanOrEqualTo("required_test", 0), exampleProto)).isFalse();
 
     // Positive tests
-    
+
     assertThat(matches(filterBuilder()
             .hasFieldLessThanOrEqualTo("id", 1L), exampleProto)).isTrue();
 

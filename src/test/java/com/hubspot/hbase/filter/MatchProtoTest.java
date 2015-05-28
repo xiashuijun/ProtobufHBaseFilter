@@ -1,12 +1,9 @@
 package com.hubspot.hbase.filter;
 
-import com.hubspot.hbase.filter.example.ExampleProtos;
-import org.apache.hadoop.hbase.filter.CompareFilter;
-import org.apache.hadoop.hbase.filter.SubstringComparator;
 import org.junit.Test;
 
 import static com.hubspot.hbase.filter.example.ExampleProtos.ExampleProto;
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatchProtoTest extends BaseProtoFilterTest {
   @Test

@@ -11,11 +11,11 @@ import com.google.common.cache.CacheBuilder;
 import com.google.protobuf.Descriptors;
 import com.google.protobuf.Message;
 import com.hubspot.hbase.filter.models.DescriptorSerializer;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.codehaus.plexus.util.dag.CycleDetectedException;
 import org.codehaus.plexus.util.dag.DAG;
 import org.codehaus.plexus.util.dag.TopologicalSorter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,7 +32,7 @@ import static com.google.protobuf.Descriptors.FileDescriptor;
 public enum ClientDescriptorCache {
   INSTANCE;
 
-  private static final Log LOG = LogFactory.getLog(ClientDescriptorCache.class);
+  private static final Logger LOG = LoggerFactory.getLogger(ClientDescriptorCache.class);
 
   private final Cache<Class<? extends Message>, Descriptor> descriptorCache
           = CacheBuilder.newBuilder()
@@ -79,12 +79,13 @@ public enum ClientDescriptorCache {
           return maybeDescriptor.get();
         }
       } catch (Exception e) {
-        LOG.error(e, e);
-        // invalid descriptor file was guessed.
+        LOG.error("Invalid descriptor file was guessed", e);
       } finally {
         try {
           inputStream.close();
-        } catch (IOException e) {}
+        } catch (IOException ignored) {
+          // ignore
+        }
       }
     }
     throw new IllegalArgumentException("Could not find descriptor for message " + clazz.getSimpleName());

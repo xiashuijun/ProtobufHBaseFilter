@@ -8,10 +8,8 @@ import com.google.common.io.ByteStreams;
 import com.hubspot.hbase.filter.example.ExampleProtos;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.filter.Filter;
-import org.apache.hadoop.hbase.filter.FilterList;
 import org.apache.hadoop.hbase.io.HbaseObjectWritable;
 import org.apache.hadoop.io.Writable;
-import org.fest.assertions.api.Assertions;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -19,7 +17,7 @@ import java.util.List;
 
 import static com.hubspot.hbase.filter.example.ExampleProtos.ExampleProto;
 import static org.apache.hadoop.hbase.HConstants.EMPTY_BYTE_ARRAY;
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProtoFilterListSerializeTest {
   @Test
