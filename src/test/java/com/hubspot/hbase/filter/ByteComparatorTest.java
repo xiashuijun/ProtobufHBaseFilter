@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static com.hubspot.hbase.filter.example.ExampleProtos.ExampleProto;
 import static org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ByteComparatorTest extends BaseProtoFilterTest {
   @Test

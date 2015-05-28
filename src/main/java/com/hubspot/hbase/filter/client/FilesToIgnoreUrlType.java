@@ -68,8 +68,9 @@ public final class FilesToIgnoreUrlType implements Vfs.UrlType {
     }
 
     for (String urlSuffix: urlSuffixesToIgnore) {
-      if (url.toExternalForm().endsWith(urlSuffix))
+      if (url.toExternalForm().endsWith(urlSuffix)) {
         return true;
+      }
     }
 
     return false;
