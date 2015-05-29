@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.hubspot</groupId>
     <artifactId>basepom</artifactId>
-    <version>10.3</version>
+    <version>10.4</version>
   </parent>
 
   <artifactId>ProtobufHBaseFilter</artifactId>
@@ -190,7 +190,6 @@
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.0.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
